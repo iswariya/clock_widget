@@ -1,0 +1,8 @@
+name: Clock Widget
+description: Module that shows a date, time and location based on the timezone.
+package: Custom
+
+type: module
+core_version_requirement: ^8.8 || ^9
+
+configure: clock_widget.settings
