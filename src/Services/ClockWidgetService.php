@@ -27,12 +27,16 @@ class ClockWidgetService {
   }
   
   /**
-   * Gets my setting.
+   * Date Time based on user selected timezone.
    */
   public function getDateTime() {
     $date = new DrupalDateTime();
-    $date->setTimezone(new \DateTimeZone('Asia/Kolkata'));
-    return $date->format('m/d/Y g:i a');
+    $date->setTimezone(new \DateTimeZone($this->configFactory->get('clock_widget.settings')->get('clock_widget_timezone')));
+    return [
+      'date_time' => $date->format('jS M Y g:i A'),
+      'date' => $date->format('l\, j F Y'),
+      'time' => $date->format('g:i a'),
+    ];
   }
   
 }

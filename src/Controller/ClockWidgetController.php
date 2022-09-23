@@ -8,12 +8,12 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\clock_widget\Services\ClockWidgetService;
 
 /**
- * Defines HelloController class.
+ * Defines ClockWidgetController class.
  */
 class ClockWidgetController extends ControllerBase implements ContainerInjectionInterface {
 
   /**
-   * Nutrition table helper.
+   * Clock widget service.
    *
    * @var \Drupal\clock_widget\ClockWidgetService
    */
@@ -42,8 +42,10 @@ class ClockWidgetController extends ControllerBase implements ContainerInjection
    *   Return markup array.
    */
   public function getDateTime() {
-    print_r($this->clockWidgetService->getDateTime());
-    exit;
+    return [
+      '#type' => 'markup',
+      '#markup' => $this->clockWidgetService->getDateTime()['date_time'],
+    ];
   }
 
 }
