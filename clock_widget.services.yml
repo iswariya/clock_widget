@@ -1,0 +1,5 @@
+services:
+  clock_widget.service:
+    class: Drupal\clock_widget\Services\ClockWidgetService
+    arguments:
+      [ '@config.factory' ]

@@ -1,0 +1,15 @@
+clock_widget.settings:
+  path: '/admin/config/system/clock-widget-settings'
+  defaults:
+    _form: '\Drupal\clock_widget\Form\ClockWidgetSettingsForm'
+    _title: 'Clock Widget Settings'
+  requirements:
+    _permission: 'administer site configuration'
+
+clock_widget.content:
+  path: '/clock-widget' 
+  defaults: 
+    _controller: '\Drupal\clock_widget\Controller\ClockWidgetController::getDateTime' 
+    _title: 'Clock Widget'
+  requirements: 
+    _permission: 'access content'
