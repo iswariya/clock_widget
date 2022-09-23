@@ -68,7 +68,10 @@ class ClockWidgetBlock extends BlockBase implements ContainerFactoryPluginInterf
   }
 
   /**
+   * Disable cache.
+   *
    * @return int
+   *   A integer value.
    */
   public function getCacheMaxAge() {
     return 0;

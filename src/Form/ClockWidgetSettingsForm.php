@@ -10,21 +10,21 @@ use Drupal\Core\Form\FormStateInterface;
  */
 class ClockWidgetSettingsForm extends ConfigFormBase {
 
-  /** 
+  /**
    * Config settings.
    *
    * @var string
    */
   const SETTINGS = 'clock_widget.settings';
 
-  /** 
+  /**
    * {@inheritdoc}
    */
   public function getFormId() {
     return 'clock_wdget_settings';
   }
 
-  /** 
+  /**
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
@@ -33,7 +33,7 @@ class ClockWidgetSettingsForm extends ConfigFormBase {
     ];
   }
 
-  /** 
+  /**
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
@@ -77,7 +77,7 @@ class ClockWidgetSettingsForm extends ConfigFormBase {
     return parent::buildForm($form, $form_state);
   }
 
-  /** 
+  /**
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {

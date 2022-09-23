@@ -6,26 +6,26 @@ use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Datetime\DrupalDateTime;
 
 /**
- * Class ClockWidgetService.
+ * Service to provide date and time based on timezone.
  *
  * @package Drupal\clock_widget\Services
  */
 class ClockWidgetService {
-  
+
   /**
    * The config factory interface.
    *
    * @var \Drupal\Core\Config\ConfigFactoryInterface
    */
   protected $configFactory;
-  
+
   /**
    * Constructor.
    */
   public function __construct(ConfigFactoryInterface $config_factory) {
     $this->configFactory = $config_factory;
   }
-  
+
   /**
    * Date Time based on user selected timezone.
    */
@@ -38,5 +38,5 @@ class ClockWidgetService {
       'time' => $date->format('g:i a'),
     ];
   }
-  
+
 }
